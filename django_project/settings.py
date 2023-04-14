@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #  Local
     "accounts.apps.AccountsConfig", # new
+    "herbs.apps.HerbsConfig", # new
     
 ]
 
@@ -127,3 +128,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 AUTH_USER_MODEL = "accounts.CustomUser"  # new
+
+

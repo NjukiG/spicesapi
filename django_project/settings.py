@@ -37,9 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     # 3rd-party apps
     "rest_framework", # new
     "corsheaders", # new
+    "rest_framework.authtoken",  # new
+    "dj_rest_auth", # new
+
     #  Local
     "accounts.apps.AccountsConfig", # new
     "herbs.apps.HerbsConfig", # new
@@ -51,6 +55,11 @@ REST_FRAMEWORK = { # new
         # "rest_framework.permissions.AllowAny",
         "rest_framework.permissions.IsAuthenticated", # new
     ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [ # new
+        "rest_framework.authentication.SessionAuthentication",
+        # "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.TokenAuthentication", # new
+],
 }
 
 MIDDLEWARE = [
